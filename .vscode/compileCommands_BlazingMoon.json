@@ -1,0 +1,58 @@
+[
+	{
+		"file": "/home/natalie/Repos/Unreal/BlazingMoon/Source/BlazingMoon/BlazingMoon.Build.cs",
+		"arguments": [
+			"/software/unreal5.11/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v20_clang-13.0.1-centos7/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/natalie/Repos/Unreal/BlazingMoon/.vscode/compileCommands_BlazingMoon/BlazingMoon.249.rsp"
+		],
+		"directory": "/software/unreal5.11/Engine/Source"
+	},
+	{
+		"file": "/home/natalie/Repos/Unreal/BlazingMoon/Source/BlazingMoon/BlazingMoon.cpp",
+		"arguments": [
+			"/software/unreal5.11/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v20_clang-13.0.1-centos7/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/natalie/Repos/Unreal/BlazingMoon/.vscode/compileCommands_BlazingMoon/BlazingMoon.249.rsp"
+		],
+		"directory": "/software/unreal5.11/Engine/Source"
+	},
+	{
+		"file": "/home/natalie/Repos/Unreal/BlazingMoon/Source/BlazingMoon/BlazingMoon.h",
+		"arguments": [
+			"/software/unreal5.11/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v20_clang-13.0.1-centos7/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/natalie/Repos/Unreal/BlazingMoon/.vscode/compileCommands_BlazingMoon/BlazingMoon.249.rsp"
+		],
+		"directory": "/software/unreal5.11/Engine/Source"
+	},
+	{
+		"file": "/home/natalie/Repos/Unreal/BlazingMoon/Source/BlazingMoon/BlazingMoonCharacter.cpp",
+		"arguments": [
+			"/software/unreal5.11/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v20_clang-13.0.1-centos7/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/natalie/Repos/Unreal/BlazingMoon/.vscode/compileCommands_BlazingMoon/BlazingMoon.249.rsp"
+		],
+		"directory": "/software/unreal5.11/Engine/Source"
+	},
+	{
+		"file": "/home/natalie/Repos/Unreal/BlazingMoon/Source/BlazingMoon/BlazingMoonCharacter.h",
+		"arguments": [
+			"/software/unreal5.11/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v20_clang-13.0.1-centos7/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/natalie/Repos/Unreal/BlazingMoon/.vscode/compileCommands_BlazingMoon/BlazingMoon.249.rsp"
+		],
+		"directory": "/software/unreal5.11/Engine/Source"
+	},
+	{
+		"file": "/home/natalie/Repos/Unreal/BlazingMoon/Source/BlazingMoon/BlazingMoonGameMode.cpp",
+		"arguments": [
+			"/software/unreal5.11/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v20_clang-13.0.1-centos7/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/natalie/Repos/Unreal/BlazingMoon/.vscode/compileCommands_BlazingMoon/BlazingMoon.249.rsp"
+		],
+		"directory": "/software/unreal5.11/Engine/Source"
+	},
+	{
+		"file": "/home/natalie/Repos/Unreal/BlazingMoon/Source/BlazingMoon/BlazingMoonGameMode.h",
+		"arguments": [
+			"/software/unreal5.11/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v20_clang-13.0.1-centos7/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/natalie/Repos/Unreal/BlazingMoon/.vscode/compileCommands_BlazingMoon/BlazingMoon.249.rsp"
+		],
+		"directory": "/software/unreal5.11/Engine/Source"
+	}
+]

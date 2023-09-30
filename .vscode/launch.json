@@ -1,0 +1,121 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch BlazingMoon (Debug)",
+			"request": "launch",
+			"program": "/home/natalie/Repos/Unreal/BlazingMoon/Binaries/Linux/UnrealGame-Linux-Debug",
+			"preLaunchTask": "BlazingMoon Linux Debug Build",
+			"args": [
+			],
+			"cwd": "/software/unreal5.11",
+			"type": "cppdbg",
+			"visualizerFile": "/software/unreal5.11/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+			"showDisplayString": true
+		},
+		{
+			"name": "Launch BlazingMoon (DebugGame)",
+			"request": "launch",
+			"program": "/home/natalie/Repos/Unreal/BlazingMoon/Binaries/Linux/UnrealGame-Linux-DebugGame",
+			"preLaunchTask": "BlazingMoon Linux DebugGame Build",
+			"args": [
+			],
+			"cwd": "/software/unreal5.11",
+			"type": "cppdbg",
+			"visualizerFile": "/software/unreal5.11/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+			"showDisplayString": true
+		},
+		{
+			"name": "Launch BlazingMoon (Development)",
+			"request": "launch",
+			"program": "/home/natalie/Repos/Unreal/BlazingMoon/Binaries/Linux/UnrealGame",
+			"preLaunchTask": "BlazingMoon Linux Development Build",
+			"args": [
+			],
+			"cwd": "/software/unreal5.11",
+			"type": "cppdbg",
+			"visualizerFile": "/software/unreal5.11/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+			"showDisplayString": true
+		},
+		{
+			"name": "Launch BlazingMoon (Test)",
+			"request": "launch",
+			"program": "/home/natalie/Repos/Unreal/BlazingMoon/Binaries/Linux/UnrealGame-Linux-Test",
+			"preLaunchTask": "BlazingMoon Linux Test Build",
+			"args": [
+			],
+			"cwd": "/software/unreal5.11",
+			"type": "cppdbg",
+			"visualizerFile": "/software/unreal5.11/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+			"showDisplayString": true
+		},
+		{
+			"name": "Launch BlazingMoon (Shipping)",
+			"request": "launch",
+			"program": "/home/natalie/Repos/Unreal/BlazingMoon/Binaries/Linux/UnrealGame-Linux-Shipping",
+			"preLaunchTask": "BlazingMoon Linux Shipping Build",
+			"args": [
+			],
+			"cwd": "/software/unreal5.11",
+			"type": "cppdbg",
+			"visualizerFile": "/software/unreal5.11/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+			"showDisplayString": true
+		},
+		{
+			"name": "Launch BlazingMoonEditor (Debug)",
+			"request": "launch",
+			"program": "/software/unreal5.11/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+			"preLaunchTask": "BlazingMoonEditor Linux Debug Build",
+			"args": [
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject"
+			],
+			"cwd": "/software/unreal5.11",
+			"type": "cppdbg",
+			"visualizerFile": "/software/unreal5.11/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+			"showDisplayString": true
+		},
+		{
+			"name": "Launch BlazingMoonEditor (DebugGame)",
+			"request": "launch",
+			"program": "/software/unreal5.11/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+			"preLaunchTask": "BlazingMoonEditor Linux DebugGame Build",
+			"args": [
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject"
+			],
+			"cwd": "/software/unreal5.11",
+			"type": "cppdbg",
+			"visualizerFile": "/software/unreal5.11/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+			"showDisplayString": true
+		},
+		{
+			"name": "Launch BlazingMoonEditor (Development)",
+			"request": "launch",
+			"program": "/software/unreal5.11/Engine/Binaries/Linux/UnrealEditor",
+			"preLaunchTask": "BlazingMoonEditor Linux Development Build",
+			"args": [
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject"
+			],
+			"cwd": "/software/unreal5.11",
+			"type": "cppdbg",
+			"visualizerFile": "/software/unreal5.11/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+			"showDisplayString": true
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "coreclr",
+			"request": "launch",
+			"program": "/software/unreal5.11/Engine/Build/BatchFiles/RunUBT.bat",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-game",
+				"-engine"
+			],
+			"console": "internalConsole",
+			"internalConsoleOptions": "openOnSessionStart",
+			"stopAtEntry": false,
+			"cwd": "/software/unreal5.11"
+		}
+	]
+}

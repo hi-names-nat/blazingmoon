@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "19A9D53D-1C34-4108-A3E6-62AA6E251863",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "BlazingMoon",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
+		}
+	]
+}

@@ -1,0 +1,720 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "BlazingMoon Linux Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"Debug",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"Debug",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BlazingMoon Linux Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"Debug",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"DebugGame",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"DebugGame",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BlazingMoon Linux DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"DebugGame",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"Development",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"Development",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BlazingMoon Linux Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"Development",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"Test",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"Test",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BlazingMoon Linux Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"Test",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"Shipping",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"Shipping",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BlazingMoon Linux Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon Linux Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"Linux",
+				"Shipping",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"Debug",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"Debug",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BlazingMoon LinuxArm64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"Debug",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"DebugGame",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"DebugGame",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BlazingMoon LinuxArm64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"DebugGame",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"Development",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"Development",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BlazingMoon LinuxArm64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"Development",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"Test",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"Test",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BlazingMoon LinuxArm64 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"Test",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"Shipping",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"Shipping",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BlazingMoon LinuxArm64 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoon LinuxArm64 Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoon",
+				"LinuxArm64",
+				"Shipping",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoonEditor Linux Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoonEditor",
+				"Linux",
+				"Debug",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoonEditor Linux Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoonEditor",
+				"Linux",
+				"Debug",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BlazingMoonEditor Linux Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoonEditor Linux Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoonEditor",
+				"Linux",
+				"Debug",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoonEditor Linux DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoonEditor",
+				"Linux",
+				"DebugGame",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoonEditor Linux DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoonEditor",
+				"Linux",
+				"DebugGame",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BlazingMoonEditor Linux DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoonEditor Linux DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoonEditor",
+				"Linux",
+				"DebugGame",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoonEditor Linux Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoonEditor",
+				"Linux",
+				"Development",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoonEditor Linux Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoonEditor",
+				"Linux",
+				"Development",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BlazingMoonEditor Linux Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		},
+		{
+			"label": "BlazingMoonEditor Linux Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"BlazingMoonEditor",
+				"Linux",
+				"Development",
+				"/home/natalie/Repos/Unreal/BlazingMoon/BlazingMoon.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/software/unreal5.11"
+			}
+		}
+	]
+}
