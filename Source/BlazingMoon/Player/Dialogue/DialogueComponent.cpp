@@ -31,8 +31,6 @@ void UDialogueComponent::BeginPlay()
 
 void UDialogueComponent::Interact(APlayerController* PlayerController)
 {
-	IInteractInterface::Interact(PlayerController);
-
 	if (Initial)
 	{
 		Player = Cast<ABlazingMoonCharacter>(PlayerController->GetCharacter());

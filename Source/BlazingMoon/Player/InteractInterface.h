@@ -7,7 +7,7 @@
 #include "InteractInterface.generated.h"
 
 // This class does not need to be modified.
-UINTERFACE()
+UINTERFACE(MinimalAPI)
 class BLAZINGMOON_API UInteractInterface : public UInterface
 {
 	GENERATED_BODY()
@@ -22,5 +22,5 @@ class BLAZINGMOON_API IInteractInterface
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-	virtual void Interact(APlayerController* PlayerController);
+	virtual void Interact(APlayerController* PlayerController) = 0;
 };
