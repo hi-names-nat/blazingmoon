@@ -11,7 +11,7 @@ FSearchState ULevelTransitionHelpers::FindMatchingEntryLocation(TArray<AActor*> 
 	{
 		if (auto t = Cast<AAreaEntryPlaceholder>(actor))
 		{
-			if (t->TriggerLevelName() == SearchTerm) return FSearchState(true, t->GetActorLocation());
+			if (t->TriggerLevel.GetAssetName() == SearchTerm) return FSearchState(true, t->GetActorLocation());
 		} 
 	}
 	return FSearchState(false, FVector::Zero());

@@ -22,5 +22,5 @@ class BLAZINGMOON_API IInteractInterface
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-	virtual void Interact(APlayerController* PlayerController){};
+	virtual void Interact(APlayerController* PlayerController)=0;
 };
