@@ -9,7 +9,7 @@
 /**
  * 
  */
-UINTERFACE()
+UINTERFACE(MinimalAPI)
 class BLAZINGMOON_API UDamageInterface : public UInterface
 {
 	GENERATED_BODY()
