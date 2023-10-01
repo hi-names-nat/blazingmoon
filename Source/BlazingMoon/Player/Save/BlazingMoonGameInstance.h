@@ -11,16 +11,12 @@ struct FBlazingMoonPlayerState
 {
 	GENERATED_BODY()
 
-	FBlazingMoonPlayerState() = default;
-	bool HasSunRock =false;
-
+	UPROPERTY(EditDefaultsOnly)
+	uint32 Health=0;
+	
 	//Weapons
 	UPROPERTY(EditDefaultsOnly)
 	bool HasFlail=false;
-	UPROPERTY(EditDefaultsOnly)
-	bool HasBow=false;
-	UPROPERTY(EditDefaultsOnly)
-	uint32 Health=0;
 };
 
 USTRUCT(BlueprintType)
@@ -28,6 +24,8 @@ struct FBlazingMoonGameState
 {
 	GENERATED_BODY()
 	FBlazingMoonGameState() = default;
+
+	bool HasSunRock;
 };
 
 /**
@@ -44,9 +42,19 @@ class BLAZINGMOON_API UBlazingMoonGameInstance : public UGameInstance
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"))
 	FBlazingMoonGameState GameState;
 
-	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"))
+	FString PreviousLevel;	
 public:
-	FORCEINLINE FBlazingMoonPlayerState* GetPlayerState() {return &PlayerState;}
-	FORCEINLINE void UpdateGameState(FBlazingMoonGameState NewGameState) {GameState=NewGameState;}
-	FORCEINLINE void UpdatePlayerState(FBlazingMoonPlayerState NewPlayerState) {PlayerState = NewPlayerState;}
+	FORCEINLINE FBlazingMoonGameState* GetGameStatePtr() {return &GameState;}
+	UFUNCTION(BlueprintCallable)
+	FORCEINLINE FBlazingMoonGameState GetGameState() const {return GameState;}
+	FORCEINLINE FBlazingMoonPlayerState* GetPlayerStatePtr() {return &PlayerState;}
+	UFUNCTION(BlueprintCallable)
+	FORCEINLINE FBlazingMoonPlayerState GetPlayerState() const {return PlayerState;}
+	UFUNCTION(BlueprintCallable)
+	FORCEINLINE FString GetPreviousLevel() const {return PreviousLevel;}
+
+	FORCEINLINE void UpdateGameState(const FBlazingMoonGameState NewGameState) {GameState=NewGameState;}
+	FORCEINLINE void UpdatePlayerState(const FBlazingMoonPlayerState NewPlayerState) {PlayerState = NewPlayerState;}
+	FORCEINLINE void SetPreviousLevel(FString levelName) {PreviousLevel = levelName;}
 };

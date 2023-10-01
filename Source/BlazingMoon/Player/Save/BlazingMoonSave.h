@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "BlazingMoonGameInstance.h"
 #include "GameFramework/SaveGame.h"
 #include "BlazingMoonSave.generated.h"
 
@@ -15,5 +16,12 @@ class BLAZINGMOON_API UBlazingMoonSave : public USaveGame
 {
 	GENERATED_BODY()
 
-	//todo
+	FBlazingMoonGameState GameState;
+	FBlazingMoonPlayerState PlayerState;
+	FName Level;
+
+public:
+	UFUNCTION(BlueprintCallable)
+	void LoadGame();
+	void SaveGame(FBlazingMoonGameState Game, FBlazingMoonPlayerState Player);
 };

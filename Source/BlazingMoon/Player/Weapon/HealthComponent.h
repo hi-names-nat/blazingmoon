@@ -20,7 +20,6 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = Callbacks)
 	FOnKilled OnKilled;
 
-
 	UPROPERTY(BlueprintAssignable, Category = Callbacks)
 	FOnKilled OnHurt;
 	

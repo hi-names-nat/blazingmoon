@@ -22,13 +22,15 @@
 // ABlazingMoonCharacter
 
 void ABlazingMoonCharacter::OnPlayerHurt()
-{if (PlayerState) PlayerState->Health = HealthComponent->CurrentHealth;}
+{PlayerState->Health = HealthComponent->CurrentHealth;}
 
 ABlazingMoonCharacter::ABlazingMoonCharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
-		
+
+	PlayerState = nullptr;
+	
 	// Don't rotate when the controller rotates. Let that just affect the camera.
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = true;
@@ -75,7 +77,6 @@ ABlazingMoonCharacter::ABlazingMoonCharacter()
 
 void ABlazingMoonCharacter::BeginPlay()
 {
-	PlayerState = Cast<UBlazingMoonGameInstance>(GetGameInstance())->GetPlayerState();
 	
 	// Call the base class  
 	Super::BeginPlay();
@@ -85,21 +86,23 @@ void ABlazingMoonCharacter::BeginPlay()
 
 	//Add Input Mapping Context
 	SetMainMappingContext();
-
+	
 	ThrowCooldownDelegate.BindLambda([this](){CanThrow=true;});
-	HealthComponent->OnHurt.AddDynamic(this, &ABlazingMoonCharacter::ABlazingMoonCharacter::OnPlayerHurt);
+	HealthComponent->OnHurt.AddDynamic(this, &ABlazingMoonCharacter::OnPlayerHurt);
 
 	BoomDefaultTransform = CameraBoom->GetRelativeTransform();
 
 }
 
-//////////////////////////////////////////////////////////////////////////
-// Input
-
 void ABlazingMoonCharacter::ConfigurePlayerState()
 {
 	//Set up all that tasty stuff with the reference to player state
+	PlayerState = Cast<UBlazingMoonGameInstance>(GetGameInstance())->GetPlayerStatePtr();
+	HealthComponent->SetHealth(PlayerState->Health);
 }
+
+//////////////////////////////////////////////////////////////////////////
+// Input
 
 void ABlazingMoonCharacter::SetDialogueMappingContext() const
 {
