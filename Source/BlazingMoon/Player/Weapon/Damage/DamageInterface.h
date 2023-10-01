@@ -9,7 +9,7 @@
 /**
  * 
  */
-UINTERFACE(MinimalAPI)
+UINTERFACE()
 class BLAZINGMOON_API UDamageInterface : public UInterface
 {
 	GENERATED_BODY()
@@ -21,6 +21,6 @@ class BLAZINGMOON_API IDamageInterface
 
 public:
 	UFUNCTION()
-	virtual void DamageObject(float amount, UDamageType* DamageType) = 0;
+	virtual void DamageObject(float amount, UDamageType* DamageType){};
 	
 };
