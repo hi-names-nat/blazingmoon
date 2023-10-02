@@ -20,7 +20,7 @@ public:
 	FOnCorrectDamageType OnCorrectDamage;
 
 	//Damage is agnostic on this. Change for extraneous behavior later if possible.
-	virtual void DamageObject(float amount, UDamageType* DamageType) override;
+	virtual void DamageObject(float amount, bool isFire) override;
 	
 protected:
 	UPROPERTY(EditDefaultsOnly)

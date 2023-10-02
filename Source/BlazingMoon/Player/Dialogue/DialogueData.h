@@ -10,7 +10,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(BlueprintType)
 class BLAZINGMOON_API UDialogueData : public UDataAsset
 {
 	GENERATED_BODY()

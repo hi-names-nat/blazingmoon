@@ -16,7 +16,7 @@ struct FBlazingMoonPlayerState
 	
 	//Weapons
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	bool HasFlail=false;
+	bool HasFlail=true;
 	
 };
 

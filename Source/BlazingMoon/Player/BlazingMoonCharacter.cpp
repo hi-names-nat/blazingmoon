@@ -73,6 +73,8 @@ ABlazingMoonCharacter::ABlazingMoonCharacter()
 	HealthComponent->SetupAttachment(RootComponent);
 
 	InteractionComponent = CreateDefaultSubobject<UInteractionComponent>(TEXT("interact"));
+
+	fire = NewObject<UUDamageFire>();
 }
 
 void ABlazingMoonCharacter::BeginPlay()
@@ -291,18 +293,24 @@ void ABlazingMoonCharacter::MeleeAttack_Implementation()
 	if (!PlayerState->HasFlail) return;
 
 	FHitResult OUT_Hit;
+	FCollisionQueryParams Params;
+	Params.AddIgnoredActor(this);
 	GetWorld()->LineTraceSingleByChannel(
 		OUT_Hit,
 		GetActorLocation(),
 		GetActorLocation() + (FollowCamera->GetForwardVector() * FlailLength),
-		ECC_GameTraceChannel3
+		ECC_GameTraceChannel3,
+		Params
 		);
 
 	DrawDebugSphere(GetWorld(), OUT_Hit.Location, 50, 12, FColor::Red, true);
-	if (const auto OtherHealth = Cast<UHealthComponent>(OUT_Hit.Component))
+	if (const auto OtherHealth = Cast<IDamageInterface>(OUT_Hit.GetComponent()))
 	{
-		OtherHealth->TakeDamage(FlailDamage);
+		UE_LOG(LogTemp, Log, TEXT("hell"))
+		OtherHealth->DamageObject(FlailDamage, true);
 	}
+
+	if (FlailSound) UGameplayStatics::PlaySoundAtLocation(this, FlailSound, GetActorLocation(), GetActorRotation());
 }
 
 void ABlazingMoonCharacter::SwitchAttackMethod(bool Aiming)

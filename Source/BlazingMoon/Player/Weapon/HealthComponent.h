@@ -33,7 +33,7 @@ public:
 	void TakeDamage(float Amount);
 
 	//Damage is agnostic on this. Change for extraneous behavior later if possible.
-	virtual void DamageObject(float amount, UDamageType* DamageType) override {TakeDamage(amount);};
+	virtual void DamageObject(float amount, bool DamageType) override {TakeDamage(amount);};
 
 	UFUNCTION(BlueprintCallable)
 	void HealDamage(const float Amount) {CurrentHealth += Amount; if (CurrentHealth > MaxHealth) CurrentHealth = MaxHealth;}

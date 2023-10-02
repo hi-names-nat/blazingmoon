@@ -22,7 +22,7 @@ class BLAZINGMOON_API UDialogueComponent : public USphereComponent, public IInte
 
 	class ABlazingMoonCharacter* Player;
 
-	UPROPERTY(EditDefaultsOnly, meta=(AllowPrivateAccess="true"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess="true"))
 	UDialogueData* DialogueData;
 
 	int32 DialogueIndex = 0;

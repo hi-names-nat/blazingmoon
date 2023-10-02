@@ -32,6 +32,8 @@ protected:
 	UPROPERTY(EditDefaultsOnly, meta=(AllowPrivateAccess="true"))
 	int Damage;
 
+	
+
 
 public:
 	// Called every frame

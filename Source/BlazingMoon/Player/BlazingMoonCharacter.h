@@ -7,6 +7,7 @@
 #include "InputActionValue.h"
 #include "Save/BlazingMoonGameInstance.h"
 #include "Weapon/HealthComponent.h"
+#include "Weapon/Damage/UDamageFire.h"
 #include "BlazingMoonCharacter.generated.h"
 
 
@@ -80,6 +81,9 @@ class BLAZINGMOON_API ABlazingMoonCharacter : public ACharacter
 	
 protected:
 
+	UPROPERTY()
+	UUDamageFire* fire;
+	
 	UPROPERTY(BlueprintAssignable, Category = Aim)
 	FOnBeginAim OnBeginAim;
 	
