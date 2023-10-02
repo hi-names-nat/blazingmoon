@@ -5,9 +5,8 @@
 
 #include "Kismet/GameplayStatics.h"
 
-void UBlazingMoonSave::LoadGame()
+void UBlazingMoonSave::LoadGame(UBlazingMoonGameInstance* GameInstance)
 {
-	auto GameInstance = Cast<UBlazingMoonGameInstance>(UGameplayStatics::GetGameInstance(this));
 	UGameplayStatics::OpenLevel(GetWorld(), Level);
 	GameInstance->UpdateGameState(GameState);
 	GameInstance->UpdatePlayerState(PlayerState);

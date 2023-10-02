@@ -21,7 +21,7 @@ class BLAZINGMOON_API UBlazingMoonSave : public USaveGame
 	FName Level;
 
 public:
-	UFUNCTION(BlueprintCallable)
-	void LoadGame();
+	UFUNCTION(BlueprintCallable)	
+	void LoadGame(UBlazingMoonGameInstance* GameInstance);
 	void SaveGame(FBlazingMoonGameState Game, FBlazingMoonPlayerState Player);
 };
