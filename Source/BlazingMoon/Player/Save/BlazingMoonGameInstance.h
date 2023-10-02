@@ -17,6 +17,8 @@ struct FBlazingMoonPlayerState
 	//Weapons
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	bool HasFlail=true;
+
+
 	
 };
 
@@ -37,6 +39,8 @@ class BLAZINGMOON_API UBlazingMoonGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 
+
+	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"))
 	FBlazingMoonPlayerState PlayerState;
 
@@ -54,6 +58,9 @@ public:
 	FORCEINLINE FBlazingMoonPlayerState GetPlayerState() const {return PlayerState;}
 	UFUNCTION(BlueprintCallable)
 	FORCEINLINE FString GetPreviousLevel() const {return PreviousLevel;}
+
+	UPROPERTY(BlueprintReadWrite)
+	bool PickedGary = false;
 
 	FORCEINLINE void UpdateGameState(const FBlazingMoonGameState NewGameState) {GameState=NewGameState;}
 	FORCEINLINE void UpdatePlayerState(const FBlazingMoonPlayerState NewPlayerState) {PlayerState = NewPlayerState;}
