@@ -11,12 +11,13 @@ struct FBlazingMoonPlayerState
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditDefaultsOnly)
-	uint32 Health=100;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	int Health=100;
 	
 	//Weapons
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	bool HasFlail=false;
+	
 };
 
 USTRUCT(BlueprintType)

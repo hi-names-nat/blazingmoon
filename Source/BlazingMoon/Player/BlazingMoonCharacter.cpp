@@ -283,6 +283,7 @@ void ABlazingMoonCharacter::ThrowAttack_Implementation()
 	World->GetTimerManager().SetTimer(ThrowCooldownHandle, ThrowCooldownDelegate, ThrowCooldown, false);
 	CanThrow = false;
 	UGameplayStatics::PlaySoundAtLocation(this, ThrowSound, GetActorLocation(), GetActorRotation());
+	
 }
 
 void ABlazingMoonCharacter::MeleeAttack_Implementation()
