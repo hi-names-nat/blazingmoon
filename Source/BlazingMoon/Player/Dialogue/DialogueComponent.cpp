@@ -37,6 +37,7 @@ void UDialogueComponent::Interact(APlayerController* PlayerController)
 		Player->SetupDialogue();
 		DialogueIndex=0;
 		Initial = false;
+		OnDialogueBegin.Broadcast();
 	}
 	FString st;
 	if (DialogueData->GetParagraph(st, DialogueIndex))
@@ -48,6 +49,7 @@ void UDialogueComponent::Interact(APlayerController* PlayerController)
 	{
 		Player->DestroyDialogue();
 		Initial = true;
+		OnDialogueEnd.Broadcast();
 	}
 }
 

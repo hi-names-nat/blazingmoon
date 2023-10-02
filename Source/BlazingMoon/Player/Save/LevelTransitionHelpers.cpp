@@ -12,7 +12,6 @@ FSearchState ULevelTransitionHelpers::FindMatchingEntryLocation(TArray<AActor*> 
 	{
 		if (auto t = Cast<AAreaEntryPlaceholder>(actor))
 		{
-			UE_LOG(LogBlazingMoon, Log, TEXT("Searchterm: %s, Name: %s"), * SearchTerm, *t->TriggerLevel.GetAssetName());
 			if (t->TriggerLevel.GetAssetName() == SearchTerm) return FSearchState(true, t->GetActorLocation());
 		} 
 	}

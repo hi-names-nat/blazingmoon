@@ -9,6 +9,10 @@
 #include "DialogueComponent.generated.h"
 
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDialogueBegin);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDialogueEnd);
+
+
 class UDialogueData;
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
@@ -28,11 +32,18 @@ public:
 	// Sets default values for this component's properties
 	UDialogueComponent();
 
+	UPROPERTY(BlueprintAssignable)
+	FOnDialogueBegin OnDialogueBegin;
+	
+	UPROPERTY(BlueprintAssignable)
+	FOnDialogueEnd OnDialogueEnd;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 	
 	virtual void Interact(APlayerController* PlayerController) override;
+	
 
 public:
 	// Called every frame

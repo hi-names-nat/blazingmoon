@@ -12,7 +12,7 @@ struct FBlazingMoonPlayerState
 	GENERATED_BODY()
 
 	UPROPERTY(EditDefaultsOnly)
-	uint32 Health=0;
+	uint32 Health=100;
 	
 	//Weapons
 	UPROPERTY(EditDefaultsOnly)

@@ -19,7 +19,7 @@ class BLAZINGMOON_API UBTTask_AttackPlayer : public UBTTask_BlackboardBase
 	float AttackDistance;
 
 	UPROPERTY(EditAnywhere)
-	float Damage;
+	float Damage = 15;
 
 	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
 	

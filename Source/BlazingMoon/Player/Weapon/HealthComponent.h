@@ -24,10 +24,10 @@ public:
 	FOnKilled OnHurt;
 	
 	UPROPERTY(EditDefaultsOnly, Category=Health)
-	float MaxHealth = 100;
+	int32 MaxHealth = 100;
 
 	UPROPERTY(VisibleAnywhere, Category=Health, BlueprintReadOnly)
-	float CurrentHealth;
+	int32 CurrentHealth = 100;
 	
 	UFUNCTION(BlueprintCallable)
 	void TakeDamage(float Amount);
@@ -43,9 +43,10 @@ public:
 	// Sets default values for this component's properties
 	UHealthComponent();
 
-protected:
-	// Called when the game starts
+	UFUNCTION()
 	virtual void BeginPlay() override;
+
+protected:
 
 public:
 };

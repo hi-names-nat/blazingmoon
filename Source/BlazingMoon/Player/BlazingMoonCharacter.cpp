@@ -294,7 +294,7 @@ void ABlazingMoonCharacter::MeleeAttack_Implementation()
 		OUT_Hit,
 		GetActorLocation(),
 		GetActorLocation() + (FollowCamera->GetForwardVector() * FlailLength),
-		ECC_GameTraceChannel1
+		ECC_GameTraceChannel3
 		);
 
 	DrawDebugSphere(GetWorld(), OUT_Hit.Location, 50, 12, FColor::Red, true);
